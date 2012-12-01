@@ -2601,6 +2601,12 @@ handle_serf_lost_state(serf_t *serf)
 }
 
 static void
+handle_lost_sailor(serf_t *serf)
+{
+	/* TODO */
+}
+
+static void
 handle_serf_escape_building_state(serf_t *serf)
 {
 	if (MAP_SERF_INDEX(serf->pos) == 0) {
@@ -4436,7 +4442,7 @@ update_serf(serf_t *serf)
 		handle_serf_lost_state(serf);
 		break;
 	case SERF_STATE_LOST_SAILOR:
-		/* TODO */
+		handle_lost_sailor(serf);
 		break;
 	case SERF_STATE_27:
 		/* TODO */
