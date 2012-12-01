@@ -4284,7 +4284,7 @@ handle_serf_wake_at_flag_state(serf_t *serf)
 		serf->anim = globals.anim;
 		serf->counter = 0;
 
-		if (SERF_TYPE(serf) == SERF_DIGGER) {
+		if (SERF_TYPE(serf) == SERF_SAILOR) {
 			serf_log_state_change(serf, SERF_STATE_26);
 			serf->state = SERF_STATE_26;
 		} else {
