@@ -4285,8 +4285,8 @@ handle_serf_wake_at_flag_state(serf_t *serf)
 		serf->counter = 0;
 
 		if (SERF_TYPE(serf) == SERF_SAILOR) {
-			serf_log_state_change(serf, SERF_STATE_26);
-			serf->state = SERF_STATE_26;
+			serf_log_state_change(serf, SERF_STATE_LOST_SAILOR);
+			serf->state = SERF_STATE_LOST_SAILOR;
 		} else {
 			serf_log_state_change(serf, SERF_STATE_LOST);
 			serf->state = SERF_STATE_LOST;
@@ -4435,7 +4435,7 @@ update_serf(serf_t *serf)
 	case SERF_STATE_LOST: /* 25 */
 		handle_serf_lost_state(serf);
 		break;
-	case SERF_STATE_26:
+	case SERF_STATE_LOST_SAILOR:
 		/* TODO */
 		break;
 	case SERF_STATE_27:

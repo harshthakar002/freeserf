@@ -1548,7 +1548,7 @@ serf_get_body(serf_t *serf)
 
 		if ((serf->state == SERF_STATE_TRANSPORTING &&
 		     serf->s.walking.res == 0) ||
-		    serf->state == SERF_STATE_26 ||
+		    serf->state == SERF_STATE_LOST_SAILOR ||
 		    serf->state == SERF_STATE_27) {
 			if (t < 0x80) {
 				if (((t & 7) == 4 && !BIT_TEST(serf->type, 7)) ||
